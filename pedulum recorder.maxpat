@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-86",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 72.5, 188.0, 129.0, 22.0 ],
+					"text" : "start 0 300000 300000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-84",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "bang" ],
+					"patching_rect" : [ 72.5, 227.0, 91.0, 22.0 ],
+					"text" : "play~ pend_1 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -120,8 +144,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 569.5, 736.0, 133.0, 22.0 ],
-					"text" : "buffer~ pend_1 300000"
+					"patching_rect" : [ 184.5, 537.0, 99.0, 22.0 ],
+					"text" : "buffer~ pend_1 1"
 				}
 
 			}
@@ -131,7 +155,7 @@
 					"maxclass" : "scope~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 204.0, 611.0, 130.0, 130.0 ]
+					"patching_rect" : [ 72.5, 266.0, 130.0, 130.0 ]
 				}
 
 			}
@@ -235,8 +259,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 625.0, 72.0, 70.0, 22.0 ],
-					"text" : "cycle~ 0.25"
+					"patching_rect" : [ 625.0, 72.0, 60.0, 22.0 ],
+					"text" : "cycle~ 20"
 				}
 
 			}
@@ -375,6 +399,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-68", 0 ],
 					"source" : [ "obj-77", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"source" : [ "obj-84", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-84", 0 ],
+					"source" : [ "obj-86", 0 ]
 				}
 
 			}
